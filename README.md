@@ -6,6 +6,7 @@
 4. Choose **Google Cloud Platform** as the service connection type for Terraform and click **Next**.
 5. Open the service account key file (`.json` file).
 6. Fill out the form as follows:
+   
    6.1. Set **Project ID**.  
    6.2. Enter **Client Email** (the service account email).  
    6.3. Enter **Token URI**.  
@@ -13,11 +14,12 @@
    6.5. Set a **Service Connection Name** (choose a preferred name).  
    6.6. Check the box for **Grant access permission to all pipelines**.  
    6.7. Click **Done**.
-7. From Azure DevOps, open **Marketplace** and install the **Terraform** extension.
-8. Open your repository and upload or create your Terraform files (`.tf`).
-9. Edit your pipeline file (`.yaml`).
-10. Add the following two tasks to your pipeline:
+8. From Azure DevOps, open **Marketplace** and install the **Terraform** extension.
+9. Open your repository and upload or create your Terraform files (`.tf`).
+10. Edit your pipeline file (`.yaml`).
+11. Add the following two tasks to your pipeline:
 
+![image](https://github.com/user-attachments/assets/5b29f486-735f-4584-88a0-834f178addfc)
 
 
     - task: TerraformTaskV4@4
