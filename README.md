@@ -19,40 +19,5 @@
 10. Edit your pipeline file (`.yaml`).
 11. Add the following two tasks to your pipeline:
 
-    - task: TerraformTaskV4@4
-      inputs:
-        provider: 'gcp'
-        command: 'init'
-        backendServiceGCP: 'set your service connectio name'
-        backendGCPBucketName: 'set bucket name to save terraform state on it '
-        backendGCPPrefix: 'set your prefix such as terraform/state'
-        #if you add your terraform files inside directory you can refere to it using workingDirectory
-        workingDirectory: '$(Build.SourcesDirectory)/terraform_directory'
+![image](https://github.com/user-attachments/assets/a4df4381-1ae1-4fca-8021-c0ac54d0a3b8)
 
-    - task: TerraformTaskV4@4
-      inputs:
-        provider: 'gcp'
-        command: 'apply'
-        commandOptions: '-lock=false'
-        environmentServiceNameGCP: 'set bucket name to save terraform state on it'
-        #if you add your terraform files inside directory you can refere to it using workingDirectory
-        workingDirectory: '$(Build.SourcesDirectory)/terraform_directory'
-    
-    - task: TerraformTaskV4@4
-      inputs:
-        provider: 'gcp'
-        command: 'init'
-        backendServiceGCP: 'set your service connectio name'
-        backendGCPBucketName: 'set bucket name to save terraform state on it '
-        backendGCPPrefix: 'set your prefix such as terraform/state'
-        #if you add your terraform files inside directory you can refere to it using workingDirectory
-        workingDirectory: '$(Build.SourcesDirectory)/terraform_directory'
-
-    - task: TerraformTaskV4@4
-      inputs:
-        provider: 'gcp'
-        command: 'apply'
-        commandOptions: '-lock=false'
-        environmentServiceNameGCP: 'set bucket name to save terraform state on it'
-        #if you add your terraform files inside directory you can refere to it using workingDirectory
-        workingDirectory: '$(Build.SourcesDirectory)/terraform_directory'
