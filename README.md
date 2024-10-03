@@ -1,22 +1,23 @@
-# Steps to Integate between Terraform and Google Cloud Platform on AzureDevops Pipeline (CI/CD).
+# Steps to Integrate Terraform with Google Cloud Platform on Azure DevOps Pipeline (CI/CD)
 
-1- on GCP (IAM) create service account and assige role (editor)\n
-2- Download the service account key (.json)
-3- on AzureDevops (project settings)->(pipelines)->(service connections) -> (create new service connections).
-4-  Choose a service or connection type (GCP for Terraform) and click Next 
-5- open service account key file (.json file)
-6- fill the form as the following :
-6.1- set Project id 
-6.2- Client email (service accoutn mail )
-6.3- Token uri
-6.4- Private Key # Note include it from -----BEGIN PRIVATE KEY----- till -----END PRIVATE KEY-----\n  i mean the whole string between double qoutes.
-6.5- Service connection name  set preffer name you want.
-6.6- mark check box for secuirty (Grant access permission to all pipelines)
-6.7- click done.
-7- from Azuredevops open marketplace and install Terraform.
-8- open your repo and upload or create your terraform files (.tf)
-9- edit your pipeline file (.yaml)
-10- add the below two taks 
+1. On GCP (IAM), create a service account and assign the role of **Editor**.
+2. Download the service account key (`.json` file).
+3. On Azure DevOps, go to **Project Settings** -> **Pipelines** -> **Service Connections** -> **Create New Service Connection**.
+4. Choose **Google Cloud Platform** as the service connection type for Terraform and click **Next**.
+5. Open the service account key file (`.json` file).
+6. Fill out the form as follows:
+   6.1. Set **Project ID**.  
+   6.2. Enter **Client Email** (the service account email).  
+   6.3. Enter **Token URI**.  
+   6.4. Enter **Private Key** (Note: include everything between `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----`, i.e., the whole string between double quotes).  
+   6.5. Set a **Service Connection Name** (choose a preferred name).  
+   6.6. Check the box for **Grant access permission to all pipelines**.  
+   6.7. Click **Done**.
+7. From Azure DevOps, open **Marketplace** and install the **Terraform** extension.
+8. Open your repository and upload or create your Terraform files (`.tf`).
+9. Edit your pipeline file (`.yaml`).
+10. Add the following two tasks to your pipeline:
+
 
 
     - task: TerraformTaskV4@4
