@@ -1,6 +1,6 @@
 # Steps to Integate between Terraform and Google Cloud Platform on AzureDevops Pipeline (CI/CD).
 
-1- on GCP (IAM) create service account and assige role (editor)
+1- on GCP (IAM) create service account and assige role (editor)\n
 2- Download the service account key (.json)
 3- on AzureDevops (project settings)->(pipelines)->(service connections) -> (create new service connections).
 4-  Choose a service or connection type (GCP for Terraform) and click Next 
