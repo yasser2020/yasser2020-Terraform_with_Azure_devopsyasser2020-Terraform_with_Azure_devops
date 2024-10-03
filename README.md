@@ -18,10 +18,9 @@
 9. Open your repository and upload or create your Terraform files (`.tf`).
 10. Edit your pipeline file (`.yaml`).
 11. Add the following two tasks to your pipeline:
+    ![image](https://github.com/user-attachments/assets/16b414ec-1ea9-486f-88b2-0053a5bfe876)
 
-
-
-
+    
     - task: TerraformTaskV4@4
       inputs:
         provider: 'gcp'
