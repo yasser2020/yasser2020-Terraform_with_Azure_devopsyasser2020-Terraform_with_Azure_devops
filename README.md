@@ -19,7 +19,7 @@
 10. Edit your pipeline file (`.yaml`).
 11. Add the following two tasks to your pipeline:
 
-![image](https://github.com/user-attachments/assets/5b29f486-735f-4584-88a0-834f178addfc)
+
 
 
     - task: TerraformTaskV4@4
